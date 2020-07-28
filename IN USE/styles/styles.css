@@ -1,0 +1,10 @@
+#section-landing{
+    background-color: #bbe1fa;
+}
+
+h1 {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1.5;
+}

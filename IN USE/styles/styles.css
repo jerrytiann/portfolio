@@ -2,9 +2,17 @@
     background-color: #bbe1fa;
 }
 
+#navbarTogglerDemo02{
+    font-family: "Roboto", sans-serif
+}
+
 h1 {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
     font-size: 3rem;
     line-height: 1.5;
+}
+
+.container-fluid{
+    padding: 3% 15%;
 }

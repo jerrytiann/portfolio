@@ -1,4 +1,6 @@
-/* Colour palette from:  https://coolors.co/1f4068-a9def9-8d818c-ffd23f-1cfeba */
+/* Colour palette from:  
+https://coolors.co/1f4068-a9def9-8d818c-ffd23f-1cfeba
+https://coolors.co/484041-434371-a9def9-70ee9c-b5f44a */
 
 
 /* Global settings */
@@ -6,12 +8,13 @@
 body{
     font-family: "Roboto", sans-serif;
     color: #ebecf1;
+    background-color: #1f4068;
 }
 
 h1 {
     font-weight: 900;
     font-size: 3.5rem; 
-    color: #A9DEF9;
+    color: #C6E9FB;
 }
 
 h5{
@@ -27,6 +30,24 @@ h5{
 
 .nav-item{
     padding: 0 12px;
+}
+
+.navbar-nav a{
+    color: white !important;
+}
+
+.navbar-nav a:hover{
+    color: #1CFEBA !important;
+}
+
+.navbar-nav li button{
+    color: #1CFEBA;
+    border: 1px solid #1CFEBA;
+}
+
+.navbar-nav li button:hover{
+    color: #000;
+    background-color: #1CFEBA;
 }
 
 .nav-link{
@@ -51,12 +72,10 @@ h5{
 
 .container-fluid{
     padding: 3% 15% 0;
-    padding-bottom: 50%;
 }
 
 #section-landing{
     background-color: #1f4068;
-
 }
 
 .landing-btn{
@@ -71,9 +90,16 @@ h5{
 }
 
 #title-section{
-    padding: 0 10% 0;
+    padding: 5% 10% 15%;
 }
 
+#title-section h5{
+    padding-right: 45%;
+}
+
+#landing-tagline{
+    color: #8DD4F7;
+}
 /* Landing Image */
 
 

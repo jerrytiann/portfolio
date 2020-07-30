@@ -2,103 +2,99 @@
 https://coolors.co/1f4068-a9def9-8d818c-ffd23f-1cfeba
 https://coolors.co/484041-434371-a9def9-70ee9c-b5f44a */
 
-
 /* Global settings */
 
 body {
-    font-family: "Roboto", sans-serif;
-    color: #ebecf1;
-    background-color: #1f4068;
+  font-family: "Roboto", sans-serif;
+  color: #ebecf1;
+  background-color: #1f4068;
 }
 
 h1 {
-    font-weight: 900;
-    font-size: 3.5rem;
-    color: #C6E9FB;
+  font-weight: 900;
+  font-size: 3.5rem;
+  color: #c6e9fb;
 }
 
 h5 {
-    line-height: 1.5;
+  line-height: 1.5;
 }
 
 /* Nav bar */
 
 .navbar {
-    padding: 0 0 4.5rem;
-    color: #ebecf1;
+  padding: 0 0 4.5rem;
+  color: #ebecf1;
 }
 
 .nav-item {
-    padding: 0 12px;
+  padding: 0 12px;
 }
 
 .navbar-nav a {
-    color: white !important;
+  color: white !important;
 }
 
 .navbar-nav a:hover {
-    color: #1CFEBA !important;
+  color: #1cfeba !important;
 }
 
 .navbar-nav li button {
-    color: #1CFEBA;
-    border: 1px solid #1CFEBA;
+  color: #1cfeba;
+  border: 1px solid #1cfeba;
 }
 
 .navbar-nav li button:hover {
-    color: #000;
-    background-color: #1CFEBA;
+  color: #000;
+  background-color: #1cfeba;
 }
 
 .nav-link {
-    font-size: 1.1rem;
-
+  font-size: 1.1rem;
 }
 
 .navbar-brand {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 500;
-    font-size: 2rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
 }
-
 
 /* fix this */
 #menu-items {
-    color: #1CFEBA;
+  color: #1cfeba;
 }
-
 
 /* Landing section */
 
 .container-fluid {
-    padding: 3% 15% 0;
+  padding: 3% 15% 0;
 }
 
 #section-landing {
-    background-color: #1f4068;
+  background-color: #1f4068;
 }
 
 .landing-btn {
-    margin: 5% 3% 5% 0;
-    color: #1CFEBA;
-    border: 2px solid #1CFEBA;
+  margin: 5% 3% 5% 0;
+  color: #1cfeba;
+  border: 2px solid #1cfeba;
 }
 
 .landing-btn:hover {
-    color: #000;
-    background-color: #1CFEBA;
+  color: #000;
+  background-color: #1cfeba;
 }
 
 #title-section {
-    padding: 5% 10% 15%;
+  padding: 5% 10% 15%;
 }
 
 #title-section h5 {
-    padding-right: 45%;
+  padding-right: 45%;
 }
 
 #landing-tagline {
-    color: #8DD4F7;
+  color: #8dd4f7;
 }
 
-/* Landing Image */
+/* ANCHOR About me section */

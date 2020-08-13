@@ -7,4 +7,8 @@ body {
 }
 
 /* Landing section */
+.landing-section {
+  background-color: #1f4068;
+  height: 100vh;
+}
 /*# sourceMappingURL=main.css.map */

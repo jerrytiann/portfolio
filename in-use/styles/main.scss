@@ -2,6 +2,11 @@
 https://coolors.co/1f4068-a9def9-8d818c-ffd23f-1cfeba
 https://coolors.co/484041-434371-a9def9-70ee9c-b5f44a */
 
+// Imports
+
+
+@import 'functions';
+
 /* Global settings */
 
 body {
@@ -10,4 +15,11 @@ body {
 
 
 
+
+
 /* Landing section */
+
+.landing-section {
+    background-color: color(primary);
+    height: 100vh;
+}

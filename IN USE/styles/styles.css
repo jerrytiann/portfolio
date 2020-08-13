@@ -59,7 +59,6 @@ h5 {
   font-size: 2rem;
 }
 
-/* fix this */
 #menu-items {
   color: #1cfeba;
 }
@@ -98,3 +97,11 @@ h5 {
 }
 
 /* ANCHOR About me section */
+
+.profile-img {
+  width: 80%;
+}
+
+.about-section {
+  padding: 5% 10% 15%;
+}

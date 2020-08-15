@@ -1,15 +1,21 @@
 /* https://coolors.co/1f4068-434371-a9def9-70ee9c-b5f44a */
+@import 'mixins';
 @import 'functions';
-@import 'stars';
 
 /* --------------------------Navigation menu-------------------------------*/
 
 nav {
     @include flexAroundCenter;
     min-height: 8vh;
-    background: #1F4068;
-    font-family: 'Poppins', sans-serif;
+    background: rgba(31, 64, 104, 0.5);
+    //make background completely transparent
+    // background: rgba(31, 64, 104, 0);
+    font-family: 'Raleway', sans-serif;
     color: #A9DEF9;
+    position: fixed;
+    width: 100%;
+
+    
 
     li {
         padding: 0px 20px;
@@ -27,7 +33,7 @@ nav {
 
     a {
         text-decoration: none;
-        font-weight: bold;
+        font-weight: 500;
         font-size: 16px;
         letter-spacing: 2px;
         color: white;
@@ -67,12 +73,12 @@ nav {
     background: #1F4068;
     padding: 6px 10px;
     border-radius: 8px;
-    border-color: #70ee9c;
+    border-color: color(accent);
     border-width: medium;
     border-style: solid;
 
     &:hover {
-        background: #70ee9c;
+        background: color(accent);
         color: #1F4068;
         transition: all .5s ease;
     }
@@ -145,11 +151,11 @@ nav {
     padding: 0px;
 }
 
-
+@import 'stars';
 .wrapper {
     height: 100vh;
     overflow: hidden;
-    background: radial-gradient(ellipse at bottom, #1b2735 5%, #090a0f 100%);
+    background: radial-gradient(ellipse at bottom, #1F4068 5%, #13273F 100%);
 }
 
 #title {
@@ -237,4 +243,5 @@ nav {
 .about-me {
     height: 100vh;
     text-align: center;
+    background-color: color(primary);
 }

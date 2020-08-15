@@ -10,9 +10,11 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   min-height: 8vh;
-  background: #1F4068;
-  font-family: 'Poppins', sans-serif;
+  background: rgba(31, 64, 104, 0.5);
+  font-family: 'Raleway', sans-serif;
   color: #A9DEF9;
+  position: fixed;
+  width: 100%;
 }
 
 nav li {
@@ -38,7 +40,7 @@ nav li {
 
 .nav-links a {
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 16px;
   letter-spacing: 2px;
   color: white;
@@ -69,13 +71,13 @@ nav li {
   background: #1F4068;
   padding: 6px 10px;
   border-radius: 8px;
-  border-color: #70ee9c;
+  border-color: #70EE9C;
   border-width: medium;
   border-style: solid;
 }
 
 .btn-resume:hover {
-  background: #70ee9c;
+  background: #70EE9C;
   color: #1F4068;
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
@@ -172,7 +174,7 @@ nav li {
 .wrapper {
   height: 100vh;
   overflow: hidden;
-  background: radial-gradient(ellipse at bottom, #1b2735 5%, #090a0f 100%);
+  background: radial-gradient(ellipse at bottom, #1F4068 5%, #13273F 100%);
 }
 
 #title {
@@ -279,5 +281,6 @@ nav li {
 .about-me {
   height: 100vh;
   text-align: center;
+  background-color: #1F4068;
 }
 /*# sourceMappingURL=main.css.map */

@@ -155,28 +155,35 @@ nav {
 // .stars{
 //     position: absolute;
 // }
-html {
-    background: radial-gradient(ellipse at bottom, color(primary) 5%, #13273F 100%);
+.wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: radial-gradient(ellipse at bottom, color(primary) 5%, color(secondary) 100%);
+    margin: 0;
+    padding: 0;
 }
-.wrapper, .about-section{
-    height: 100%;
-    overflow: hidden;
-    
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+
 }
 
 #title {
+    @include flexAroundCenter;
+    height: 100vh;
     color: white;
-    position: absolute;
     text-align: center;
-    top: 50%;
-    left: 0;
-    right: 0;
-    font-family: Raleway;
-    font-weight: 700;
-    font-size: 2rem;
-    text-transform: uppercase;
+    font-family: 'Raleway';
+    font-weight: 300;
+    font-size: 50px;
     letter-spacing: 10px;
-    margin-top: -2%;
+    padding-left: 10px;
 }
 
 
@@ -246,8 +253,8 @@ html {
 
 /* --------------------------About Me section--------------------------------*/
 
-.about-section, .projects-section {
-    height: 100vh;
+.about-section  {
+    height: 50vh;
     text-align: center;
     font-family: 'Raleway';
     color: color(primary-light);
@@ -256,9 +263,7 @@ html {
     grid-template-rows: 1fr 3fr 1fr;
     align-items: center;
     justify-items: center;
-    z-index: 10;
-    position: absolute;
-    overflow: hidden;
+
     
 
     span {
@@ -283,3 +288,12 @@ html {
         grid-row: 2/3;
     }
 }
+
+
+
+
+.projects-section{
+  display: none;
+}
+
+

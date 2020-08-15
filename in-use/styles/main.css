@@ -170,28 +170,41 @@ nav li {
   padding: 0px;
 }
 
-html {
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
   background: radial-gradient(ellipse at bottom, #1F4068 5%, #13273F 100%);
+  margin: 0;
+  padding: 0;
 }
 
-.wrapper, .about-section {
-  height: 100%;
-  overflow: hidden;
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
 }
 
 #title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
   color: white;
-  position: absolute;
   text-align: center;
-  top: 50%;
-  left: 0;
-  right: 0;
-  font-family: Raleway;
-  font-weight: 700;
-  font-size: 2rem;
-  text-transform: uppercase;
+  font-family: 'Raleway';
+  font-weight: 300;
+  font-size: 50px;
   letter-spacing: 10px;
-  margin-top: -2%;
+  padding-left: 10px;
 }
 
 #stars-layer-1 {
@@ -280,8 +293,8 @@ html {
 }
 
 /* --------------------------About Me section--------------------------------*/
-.about-section, .projects-section {
-  height: 100vh;
+.about-section {
+  height: 50vh;
   text-align: center;
   font-family: 'Raleway';
   color: #A9DEF9;
@@ -295,22 +308,19 @@ html {
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
-  z-index: 10;
-  position: absolute;
-  overflow: hidden;
 }
 
-.about-section span, .projects-section span {
+.about-section span {
   font-size: 3rem;
   font-weight: 800;
 }
 
-.about-section img, .projects-section img {
+.about-section img {
   height: 25rem;
   width: 27rem;
 }
 
-.about-section .about-me, .projects-section .about-me {
+.about-section .about-me {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
@@ -319,12 +329,16 @@ html {
   grid-row: 2/3;
 }
 
-.about-section .img-profile, .projects-section .img-profile {
+.about-section .img-profile {
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3/4;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
+}
+
+.projects-section {
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */

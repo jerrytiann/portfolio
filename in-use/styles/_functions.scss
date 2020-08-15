@@ -1,5 +1,5 @@
-@import 'variables';
-
-@function color($colour_name) {
-    @return map-get($colourPalette, $colour_name)
+@mixin flexAroundCenter{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }

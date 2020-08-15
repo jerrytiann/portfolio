@@ -1,25 +1,107 @@
-/* Colour palette from:  
-https://coolors.co/1f4068-a9def9-8d818c-ffd23f-1cfeba
-https://coolors.co/484041-434371-a9def9-70ee9c-b5f44a */
-
-// Imports
-
-
+/* https://coolors.co/1f4068-434371-a9def9-70ee9c-b5f44a */
 @import 'functions';
+@import 'stars';
 
-/* Global settings */
 
-body {
-    margin: 0;
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.wrapper {
+    height: 100vh;
+    overflow: hidden;
+    background: radial-gradient(ellipse at bottom, #1b2735 5%, #090a0f 100%);
+}
+
+#title {
+    color: white;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 0;
+    right: 0;
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    margin-top: -2%;
+}
+
+// #title span {
+//     background: -webkit-linear-gradient(white, #38495a);
+//     -webkit-text-fill-color: transparent;
+//     -webkit-background-clip: text;
+// }
+
+#stars1 {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    animation: animateStar 50s linear infinite;
+    @include stars1;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: -1000px;
+        width: 1px;
+        height: 1px;
+        background: transparent;
+        @include stars1_after;
+    }
+}
+
+#stars2 {
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    animation: animateStar 100s linear infinite;
+    @include stars2;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: -1000px;
+        width: 2px;
+        height: 2px;
+        background: transparent;
+        @include stars2_after;
+    }
+}
+
+#stars3 {
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    animation: animateStar 150s linear infinite;
+    @include stars3;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: -1000px;
+        width: 3px;
+        height: 3px;
+        background: transparent;
+        @include stars3_after;
+    }
+}
+
+@keyframes animateStar {
+    from{
+        transform: translateY(0px) ;
+    }
+    to {
+        transform: translateY(1000px);
+    }
 }
 
 
+.about-me {
+    height: 1000px;
 
 
-
-/* Landing section */
-
-.landing-section {
-    background-color: color(primary);
-    height: 100vh;
+    text-align: center;
 }

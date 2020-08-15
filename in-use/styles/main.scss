@@ -128,8 +128,14 @@ nav {
     padding: 0px;
 }
 
+// .wrapper {
+//     height: 100vh;
+//     overflow: hidden;
+//     background: radial-gradient(ellipse at bottom, #1b2735 5%, #090a0f 100%);
+// }
+
 .wrapper {
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
     background: radial-gradient(ellipse at bottom, #1b2735 5%, #090a0f 100%);
 }
@@ -150,7 +156,7 @@ nav {
 }
 
 
-#stars1 {
+#stars-layer-1 {
     width: 1px;
     height: 1px;
     background: transparent;
@@ -168,7 +174,7 @@ nav {
     }
 }
 
-#stars2 {
+#stars-layer-2 {
     width: 2px;
     height: 2px;
     background: transparent;
@@ -186,7 +192,7 @@ nav {
     }
 }
 
-#stars3 {
+#stars-layer-3 {
     width: 3px;
     height: 3px;
     background: transparent;
@@ -216,6 +222,6 @@ nav {
 /* --------------------------Landing section--------------------------------*/
 
 .about-me {
-    height: 1000px;
+    height: 100vh;
     text-align: center;
 }

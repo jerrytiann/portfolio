@@ -281,16 +281,44 @@ nav li {
   text-align: center;
   background-color: #A9DEF9;
   font-family: 'Raleway';
+  color: #13273F;
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 3fr 3fr 1fr;
+      grid-template-columns: 1fr 3fr 3fr 1fr;
+  -ms-grid-rows: 1fr 3fr 1fr;
+      grid-template-rows: 1fr 3fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
 }
 
 .about-section span {
   font-size: 3rem;
+  font-weight: 800;
 }
 
 .about-section img {
   height: 25rem;
   width: 27rem;
+}
+
+.about-section .about-me {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+.about-section .img-profile {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
 }
 /*# sourceMappingURL=main.css.map */

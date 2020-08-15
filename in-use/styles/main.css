@@ -1,4 +1,4 @@
-/* https://coolors.co/1f4068-434371-a9def9-70ee9c-b5f44a */
+/* https://coolors.cocolor(primary)-434371-a9def9color(accent)-b5f44a */
 /* --------------------------Navigation menu-------------------------------*/
 nav {
   display: -webkit-box;
@@ -12,7 +12,6 @@ nav {
   min-height: 8vh;
   background: rgba(31, 64, 104, 0.5);
   font-family: 'Raleway', sans-serif;
-  color: #A9DEF9;
   position: fixed;
   width: 100%;
 }
@@ -51,7 +50,7 @@ nav li {
 }
 
 .nav-links li:not(:last-child) a:hover {
-  color: #70ee9c;
+  color: #70EE9C;
 }
 
 .mobile-nav {
@@ -68,7 +67,6 @@ nav li {
 }
 
 .btn-resume {
-  background: #1F4068;
   padding: 6px 10px;
   border-radius: 8px;
   border-color: #70EE9C;
@@ -277,10 +275,22 @@ nav li {
   }
 }
 
-/* --------------------------Landing section--------------------------------*/
-.about-me {
+/* --------------------------About Me section--------------------------------*/
+.about-section {
   height: 100vh;
   text-align: center;
-  background-color: #1F4068;
+  background-color: #A9DEF9;
+  font-family: 'Raleway';
+  display: -ms-grid;
+  display: grid;
+}
+
+.about-section span {
+  font-size: 3rem;
+}
+
+.about-section img {
+  height: 25rem;
+  width: 27rem;
 }
 /*# sourceMappingURL=main.css.map */

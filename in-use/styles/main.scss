@@ -1,4 +1,4 @@
-/* https://coolors.co/1f4068-434371-a9def9-70ee9c-b5f44a */
+/* https://coolors.cocolor(primary)-434371-a9def9color(accent)-b5f44a */
 @import 'mixins';
 @import 'functions';
 
@@ -11,7 +11,6 @@ nav {
     //make background completely transparent
     // background: rgba(31, 64, 104, 0);
     font-family: 'Raleway', sans-serif;
-    color: #A9DEF9;
     position: fixed;
     width: 100%;
 
@@ -47,7 +46,7 @@ nav {
         &:not(:last-child) {
 
             & a:hover {
-                color: #70ee9c;
+                color: color(accent);
             }
         }
 
@@ -70,7 +69,6 @@ nav {
 
 
 .btn-resume {
-    background: #1F4068;
     padding: 6px 10px;
     border-radius: 8px;
     border-color: color(accent);
@@ -79,7 +77,7 @@ nav {
 
     &:hover {
         background: color(accent);
-        color: #1F4068;
+        color: color(primary);
         transition: all .5s ease;
     }
 }
@@ -95,7 +93,7 @@ nav {
         right: 0px;
         height: 92vh;
         top: 8vh;
-        background-color: #1F4068;
+        background-color: color(primary);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -155,7 +153,7 @@ nav {
 .wrapper {
     height: 100vh;
     overflow: hidden;
-    background: radial-gradient(ellipse at bottom, #1F4068 5%, #13273F 100%);
+    background: radial-gradient(ellipse at bottom, color(primary) 5%, #13273F 100%);
 }
 
 #title {
@@ -238,10 +236,21 @@ nav {
     }
 }
 
-/* --------------------------Landing section--------------------------------*/
+/* --------------------------About Me section--------------------------------*/
 
-.about-me {
+.about-section {
     height: 100vh;
     text-align: center;
-    background-color: color(primary);
+    background-color: color(primary-light);
+    font-family: 'Raleway';
+    display: grid;
+
+    span {
+        font-size: 3rem;
+    }
+
+    img {
+        height: 25rem;
+        width: 27rem;
+    }
 }

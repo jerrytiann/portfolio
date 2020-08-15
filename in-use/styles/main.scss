@@ -13,6 +13,7 @@ nav {
     font-family: 'Raleway', sans-serif;
     position: fixed;
     width: 100%;
+    top: 0;
 
     
 
@@ -150,10 +151,17 @@ nav {
 }
 
 @import 'stars';
-.wrapper {
-    height: 100vh;
-    overflow: hidden;
+
+// .stars{
+//     position: absolute;
+// }
+html {
     background: radial-gradient(ellipse at bottom, color(primary) 5%, #13273F 100%);
+}
+.wrapper, .about-section{
+    height: 100%;
+    overflow: hidden;
+    
 }
 
 #title {
@@ -238,17 +246,19 @@ nav {
 
 /* --------------------------About Me section--------------------------------*/
 
-.about-section {
+.about-section, .projects-section {
     height: 100vh;
     text-align: center;
-    background-color: color(primary);
     font-family: 'Raleway';
-    color: color(secondary);
+    color: color(primary-light);
     display: grid;
     grid-template-columns: 1fr 3fr 3fr 1fr;
     grid-template-rows: 1fr 3fr 1fr;
     align-items: center;
     justify-items: center;
+    z-index: 10;
+    position: absolute;
+    overflow: hidden;
     
 
     span {

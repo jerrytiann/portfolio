@@ -14,6 +14,7 @@ nav {
   font-family: 'Raleway', sans-serif;
   position: fixed;
   width: 100%;
+  top: 0;
 }
 
 nav li {
@@ -169,10 +170,13 @@ nav li {
   padding: 0px;
 }
 
-.wrapper {
-  height: 100vh;
-  overflow: hidden;
+html {
   background: radial-gradient(ellipse at bottom, #1F4068 5%, #13273F 100%);
+}
+
+.wrapper, .about-section {
+  height: 100%;
+  overflow: hidden;
 }
 
 #title {
@@ -276,12 +280,11 @@ nav li {
 }
 
 /* --------------------------About Me section--------------------------------*/
-.about-section {
+.about-section, .projects-section {
   height: 100vh;
   text-align: center;
-  background-color: #1F4068;
   font-family: 'Raleway';
-  color: #13273F;
+  color: #A9DEF9;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 3fr 3fr 1fr;
@@ -292,19 +295,22 @@ nav li {
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
+  z-index: 10;
+  position: absolute;
+  overflow: hidden;
 }
 
-.about-section span {
+.about-section span, .projects-section span {
   font-size: 3rem;
   font-weight: 800;
 }
 
-.about-section img {
+.about-section img, .projects-section img {
   height: 25rem;
   width: 27rem;
 }
 
-.about-section .about-me {
+.about-section .about-me, .projects-section .about-me {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
@@ -313,7 +319,7 @@ nav li {
   grid-row: 2/3;
 }
 
-.about-section .img-profile {
+.about-section .img-profile, .projects-section .img-profile {
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3/4;

@@ -185,7 +185,7 @@ nav li {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100vh;
+  width: 100%;
 }
 
 #title {
@@ -197,6 +197,7 @@ nav li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
   height: 100vh;
   color: white;
   text-align: center;
@@ -204,7 +205,6 @@ nav li {
   font-weight: 300;
   font-size: 50px;
   letter-spacing: 10px;
-  padding-left: 10px;
 }
 
 #stars-layer-1 {
@@ -293,49 +293,56 @@ nav li {
 }
 
 /* --------------------------About Me section--------------------------------*/
-.about-section {
-  height: 50vh;
-  text-align: center;
-  font-family: 'Raleway';
-  color: #A9DEF9;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 3fr 3fr 1fr;
-      grid-template-columns: 1fr 3fr 3fr 1fr;
-  -ms-grid-rows: 1fr 3fr 1fr;
-      grid-template-rows: 1fr 3fr 1fr;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  justify-items: center;
+.title-section {
+  height: 100vh;
 }
 
-.about-section span {
-  font-size: 3rem;
-  font-weight: 800;
+.about-section {
+  height: 100vh;
+  margin-top: 100px;
+  padding: 0 350px;
+  font-family: 'Raleway';
+  color: white;
+}
+
+.about-section h1 {
+  font-size: 10rem;
+  z-index: 0;
+  opacity: 0.8;
+  margin-bottom: 25px;
 }
 
 .about-section img {
-  height: 25rem;
-  width: 27rem;
+  width: 300px;
+  position: relative;
+  top: -300px;
+  left: calc(100% - 100px);
+  right: calc(100% - 100px);
+  -webkit-transform: translateX(calc(-100% + 100px));
+          transform: translateX(calc(-100% + 100px));
 }
 
-.about-section .about-me {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
+.about-info {
+  max-width: 550px;
+  background-color: #1F4068;
+  -webkit-box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.25);
+  padding: 50px;
+  position: relative;
+  top: -70px;
+  left: 50%;
+  right: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 1;
 }
 
-.about-section .img-profile {
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
-  grid-column: 3/4;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
+.about-info p {
+  font-size: 1.3rem;
+}
+
+.about-info p:not(:first-child) {
+  margin-top: 30px;
 }
 
 .projects-section {

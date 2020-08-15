@@ -170,12 +170,12 @@ nav {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
-
+    width: 100%;
 }
 
 #title {
     @include flexAroundCenter;
+    width: 100%;
     height: 100vh;
     color: white;
     text-align: center;
@@ -183,7 +183,6 @@ nav {
     font-weight: 300;
     font-size: 50px;
     letter-spacing: 10px;
-    padding-left: 10px;
 }
 
 
@@ -253,42 +252,143 @@ nav {
 
 /* --------------------------About Me section--------------------------------*/
 
-.about-section  {
-    height: 50vh;
-    text-align: center;
+.title-section {
+    height: 100vh;
+}
+
+.about-section {
+    height: 100vh;
+    margin-top: 100px;
+    padding: 0 350px;
     font-family: 'Raleway';
-    color: color(primary-light);
-    display: grid;
-    grid-template-columns: 1fr 3fr 3fr 1fr;
-    grid-template-rows: 1fr 3fr 1fr;
-    align-items: center;
-    justify-items: center;
+    color: white; 
 
-    
 
-    span {
-        font-size: 3rem;
-        font-weight: 800;
-        
+    h1 {
+        font-size: 10rem;
+        z-index: 0;
+        opacity: 0.8;
+        margin-bottom: 25px;
     }
 
     img {
-        height: 25rem;
-        width: 27rem;
-    }
+        width: 300px;
+        position: relative;
+        top: -300px;
+        left: calc(100% - 100px);
+        right: calc(100% - 100px);
+        transform: translateX(calc(-100% + 100px));
 
-    .about-me {
-        grid-column: 2/3;
-        grid-row: 2/3;
-        
-    }
-
-    .img-profile {
-        grid-column: 3/4;
-        grid-row: 2/3;
     }
 }
 
+.about-info {
+    max-width: 550px;
+    background-color: color(primary);
+    box-shadow: 0 0 1.2rem rgba(0,0,0,0.25);
+    padding: 50px;
+    position: relative;
+    top: -70px;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+    p {
+        font-size: 1.3rem;
+         
+        
+        &:not(:first-child){
+            margin-top: 30px;
+        }
+    }
+
+
+}
+
+
+
+// .about-section  {
+//     height: 50vh;
+//     text-align: center;
+//     font-family: 'Raleway';
+//     color: color(primary-light);
+//     display: grid;
+//     grid-template-columns: 1fr 3fr 3fr 1fr;
+//     grid-template-rows: 1fr 3fr 1fr;
+//     align-items: center;
+//     justify-items: center;
+
+//     span {
+//         font-size: 3rem;
+//         font-weight: 800;
+        
+//     }
+
+//     img {
+//         height: 25rem;
+//         width: 27rem;
+//     }
+
+//     .about-me {
+//         grid-column: 2/3;
+//         grid-row: 2/3;
+        
+//     }
+
+//     .img-profile {
+//         grid-column: 3/4;
+//         grid-row: 2/3;
+//     }
+// }
+
+
+
+// .about-section {
+//     height: 100vh;
+//     h1{
+//         font-family: 'Raleway';
+//         color: white;
+//         font-weight: 800;
+//         font-size: 2rem;
+//         margin-bottom: 0.5rem;
+//         display: flex;
+//         justify-content: space-evenly;
+//         align-items: center;
+
+//     }
+// }
+
+// .about-container {
+//     width: 50%;
+//     height: 350px;
+//     background-color: color(secondary);
+//     border-radius: 20px;
+//     box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+//     display: flex;
+//     margin:  0px auto;
+//     position: relative;
+//     justify-content: space-evenly;
+//     align-items: center;
+//     color: white;
+//     overflow: hidden;
+
+//     img {
+//         height: 250px;
+//     }
+
+//     .about-text {
+//         width: 80%;
+//         font-family: 'Raleway';
+        
+        
+
+//         p {
+//             font-size: 1.25rem;
+          
+//         }
+//     }
+// }
 
 
 

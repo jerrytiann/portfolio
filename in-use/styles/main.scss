@@ -274,17 +274,11 @@ nav {
 
 }
 
-#about-me-title{
-    font-family: 'Raleway';
-    font-size: 5rem;
-    margin-left: 10%;
-    z-index: 0;
-
-}
-
 
 .about-me {
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 55%;
     max-width: 60%;
     padding: 5rem;
@@ -367,8 +361,8 @@ nav {
     }
 
     .img-about-me {
-        min-width: 25rem;
-        max-width: 25rem;
+        min-width: 15rem;
+        max-width: 20rem;
         transform: translate(0, -8rem);
     }
 }

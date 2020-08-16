@@ -1,5 +1,4 @@
 /* https://coolors.cocolor(primary)-434371-a9def9color(accent)-b5f44a */
-/* --------------------------Navigation menu-------------------------------*/
 *::before,
 *::after {
   margin: 0;
@@ -16,6 +15,7 @@ h5 {
   font-family: 'Raleway', sans-serif;
 }
 
+/* --------------------------Navigation menu-------------------------------*/
 .root {
   min-height: 100vh;
   display: -ms-grid;
@@ -36,11 +36,13 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   min-height: 8vh;
-  background: rgba(31, 64, 104, 0.5);
   font-family: 'Raleway', sans-serif;
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 100;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
 }
 
 nav li {
@@ -188,6 +190,17 @@ nav li {
 .nav-menu-toggle .line-3 {
   -webkit-transform: rotate(45deg) translate(-6px, -7px);
           transform: rotate(45deg) translate(-6px, -7px);
+}
+
+.scrolling-active {
+  background-color: #1F4068;
+  -webkit-box-shadow: 0 3px 1rem rgba(192, 192, 192, 0.1);
+          box-shadow: 0 3px 1rem rgba(192, 192, 192, 0.1);
+  min-height: 7vh;
+}
+
+.scrolling-active img {
+  width: 55px;
 }
 
 /* --------------------------Landing section--------------------------------*/

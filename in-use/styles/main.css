@@ -8,8 +8,22 @@
           box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: 'Raleway', sans-serif;
+}
+
+.root {
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr auto;
+      grid-template-rows: 1fr auto;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
 }
 
 nav {
@@ -309,6 +323,10 @@ nav li {
   height: 100vh;
 }
 
+#title {
+  font-size: 3rem;
+}
+
 #about {
   margin: 0px auto;
   padding: 150px 0;
@@ -347,6 +365,7 @@ nav li {
 
 .about-content {
   font-family: 'Poppins';
+  font-size: 1rem;
   padding: 30px 60px 30px 30px;
   background: #1F4068;
   border-radius: 15px;
@@ -369,10 +388,25 @@ nav li {
 .about-technologies {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(140px, 200px))[2];
-      grid-template-columns: repeat(2, minmax(140px, 200px));
+  -ms-grid-columns: (minmax(100px, 150px))[2];
+      grid-template-columns: repeat(2, minmax(100px, 150px));
   padding-top: 30px;
+  margin: 20px 0px 0px;
   list-style: none;
+  overflow: hidden;
+}
+
+.about-technologies li {
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.about-technologies li:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f753";
+  padding-right: 10px;
 }
 
 @media screen and (max-width: 1080px) {
@@ -387,6 +421,9 @@ nav li {
   }
   .about-img {
     margin: 60px auto 0;
+  }
+  .about-content {
+    padding: 30px;
   }
 }
 

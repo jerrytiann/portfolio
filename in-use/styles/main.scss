@@ -14,7 +14,7 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5, h6 {
     font-family: 'Raleway', sans-serif;
 }
 
@@ -26,7 +26,6 @@ h5 {
 }
 
 .section-title {
-
     color: white;
     display: flex;
     align-items: center;
@@ -36,7 +35,6 @@ h5 {
     font-size: 3rem;
     padding: 1.25rem;
     margin-bottom: 1.25rem;
-
 }
 
 /* --------------------------Navigation menu-------------------------------*/
@@ -90,7 +88,7 @@ nav {
         &:not(:last-child) {
 
             & a:hover {
-                color: color(accent-gradient);
+                color: color(accent);
             }
         }
 
@@ -115,12 +113,12 @@ nav {
 .btn-resume {
     padding: 6px 10px;
     border-radius: 8px;
-    border-color: color(accent-gradient);
+    border-color: color(accent);
     border-width: medium;
     border-style: solid;
 
     &:hover {
-        background: color(accent-gradient);
+        background: color(accent);
         color: color(primary);
         transition: all .5s ease;
     }
@@ -225,15 +223,17 @@ nav {
 }
 
 #title {
-    @include flexSpaceAround;
-    width: 100%;
+
+    flex-direction: column;
+    @include flexCenter;
+    text-align: center;
     height: 100vh;
     color: white;
-    text-align: center;
-    font-family: 'Raleway';
-    font-weight: 300;
-    font-size: 50px;
-    letter-spacing: 10px;
+
+
+    h6{
+        color: color(accent);
+        }
 }
 
 
@@ -346,6 +346,10 @@ nav {
     align-items: center;
     border-radius: 0.8rem;
     transform: translateX(2rem);
+}
+
+.about-info {
+    line-height: 150%;
 }
 
 
@@ -564,7 +568,7 @@ nav {
 
 
     .project-cta {
-        text-align: right;
+        text-align: left;
         font-weight: bold;
         margin-top: 1rem;
 
@@ -608,6 +612,18 @@ nav {
 
         }
 
+    }
+
+    .project-technology {
+        list-style: none;
+        margin: 1.5rem 0;
+
+        li {
+            border-style: solid;
+            padding: 0.25rem;
+            display:inline-block;
+
+        }
     }
 
     @media screen and (min-width: 600px) {

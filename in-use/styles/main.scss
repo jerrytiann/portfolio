@@ -228,7 +228,6 @@ nav {
 }
 
 #title {
-
     flex-direction: column;
     @include flexCenter;
     text-align: center;
@@ -239,6 +238,31 @@ nav {
     h6 {
         color: color(accent);
     }
+
+    
+        a {
+            margin: 20px;
+            padding: 6px 10px;
+            border-radius: 8px;
+            border-color: color(accent);
+            border-width: medium;
+            border-style: solid;
+            background: color(primary);
+            color: white;
+            font-size: 1.25rem;
+            font-family: 'Raleway';
+            text-decoration: none;
+            display:inline-block; 
+            width: 10rem;
+
+
+            &:hover {
+                background: color(accent);
+                color: color(primary);
+                transition: all .5s ease;
+            }
+        }
+    
 }
 
 
@@ -785,6 +809,7 @@ nav {
             background: color(primary);
             color: white;
             font-size: 1.25rem;
+            text-decoration: none;
 
             &:hover {
                 background: color(accent);

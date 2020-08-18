@@ -695,6 +695,8 @@ nav li {
   border-style: solid;
   padding: 0.25rem;
   display: inline-block;
+  border-width: thin;
+  font-size: 0.8rem;
 }
 
 @media screen and (min-width: 600px) {

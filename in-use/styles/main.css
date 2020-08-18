@@ -12,7 +12,8 @@ h1,
 h2,
 h3,
 h4,
-h5, h6 {
+h5,
+h6 {
   font-family: 'Raleway', sans-serif;
 }
 
@@ -384,7 +385,7 @@ nav li {
   height: 100vh;
 }
 
-.about-container {
+.about-container, .contact-container {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -463,6 +464,12 @@ nav li {
 }
 
 @media screen and (max-width: 868px) {
+  #about, #projects {
+    margin: 25vh auto;
+  }
+  #contact {
+    padding: 0;
+  }
   .about-content {
     max-width: 70rem;
     -webkit-transform: translateX(0);
@@ -493,14 +500,13 @@ nav li {
   }
 }
 
-/* --------------------------Projects--------------------------------*/
+/* --------------------------Projects section--------------------------------*/
 #projects {
   margin: 0px auto;
   padding: 25vh 0;
   max-width: 1000px;
   position: relative;
   font-family: 'Raleway';
-  height: 100vh;
   color: white;
 }
 
@@ -778,7 +784,73 @@ nav li {
   }
 }
 
-#about {
+/* --------------------------Contact section--------------------------------*/
+#contact {
+  margin: 0px auto;
+  padding: 25vh 0;
+  max-width: 1000px;
+  position: relative;
+  font-family: 'Raleway';
+  color: white;
+}
+
+#contact h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#contact .btn-contact {
+  margin-top: 3rem;
+}
+
+#contact .btn-contact a {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border-color: #70EE9C;
+  border-width: medium;
+  border-style: solid;
+  background: #1F4068;
+  color: white;
+  font-size: 1.25rem;
+}
+
+#contact .btn-contact a:hover {
+  background: #70EE9C;
+  color: #1F4068;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+#contact .social-media {
+  margin-top: 3rem;
+}
+
+#contact .social-media ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#contact .social-media ul a {
+  margin-right: 2rem;
+  color: white;
+}
+
+#contact .social-media ul a:hover {
+  color: #70EE9C;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+@media screen and (max-width: 800px) {
+  #contact h3 {
+    margin-bottom: 5rem;
+  }
+}
+
+/* --------------------------Footer section--------------------------------*/
+#footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -788,15 +860,30 @@ nav li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  color: white;
   margin: 0px auto;
   max-width: 1000px;
-  position: relative;
   color: white;
   font-family: 'Raleway';
-  height: 100vh;
+  height: 20vh;
+  line-height: 150%;
+  padding: 1.5rem;
+}
+
+#footer img {
+  margin-right: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+  #footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  #footer img {
+    margin: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */

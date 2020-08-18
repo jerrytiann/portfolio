@@ -1,5 +1,11 @@
-@mixin flexAroundCenter{
+@mixin flexSpaceAround{
     display: flex;
     justify-content: space-around;
+    align-items: center;
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }

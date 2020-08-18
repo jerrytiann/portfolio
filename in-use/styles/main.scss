@@ -18,6 +18,27 @@ h5 {
     font-family: 'Raleway', sans-serif;
 }
 
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.section-title {
+
+    color: white;
+    display: flex;
+    align-items: center;
+    -moz-box-align: center;
+    position: relative;
+    width: 100%;
+    font-size: 3rem;
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+
+}
+
 /* --------------------------Navigation menu-------------------------------*/
 .root {
     min-height: 100vh;
@@ -27,7 +48,7 @@ h5 {
 }
 
 nav {
-    @include flexAroundCenter;
+    @include flexSpaceAround;
     min-height: 8vh;
     // background: rgba(31, 64, 104, 0.1);
     //make background completely transparent
@@ -50,7 +71,7 @@ nav {
 }
 
 .nav-links {
-    @include flexAroundCenter;
+    @include flexSpaceAround;
     width: 40%;
 
     a {
@@ -186,9 +207,8 @@ nav {
 
 /* --------------------------Landing section--------------------------------*/
 
-* {
-    margin: 0px;
-    padding: 0px;
+.title-section {
+    height: 100vh;
 }
 
 @import 'stars';
@@ -204,15 +224,8 @@ nav {
     padding: 0;
 }
 
-.content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
 #title {
-    @include flexAroundCenter;
+    @include flexSpaceAround;
     width: 100%;
     height: 100vh;
     color: white;
@@ -227,6 +240,7 @@ nav {
 #stars-layer-1 {
     width: 1px;
     height: 1px;
+    border-radius: 100px;
     background: transparent;
     animation: animateStar 50s linear infinite;
     @include stars1;
@@ -237,6 +251,7 @@ nav {
         top: -1000px;
         width: 1px;
         height: 1px;
+        border-radius: 100px;
         background: transparent;
         @include stars1_after;
     }
@@ -245,6 +260,7 @@ nav {
 #stars-layer-2 {
     width: 2px;
     height: 2px;
+    border-radius: 100px;
     background: transparent;
     animation: animateStar 100s linear infinite;
     @include stars2;
@@ -255,6 +271,7 @@ nav {
         top: -1000px;
         width: 2px;
         height: 2px;
+        border-radius: 100px;
         background: transparent;
         @include stars2_after;
     }
@@ -263,6 +280,7 @@ nav {
 #stars-layer-3 {
     width: 3px;
     height: 3px;
+    border-radius: 100px;
     background: transparent;
     animation: animateStar 150s linear infinite;
     @include stars3;
@@ -271,6 +289,7 @@ nav {
         content: '';
         position: absolute;
         top: -1000px;
+        border-radius: 100px;
         width: 3px;
         height: 3px;
         background: transparent;
@@ -290,9 +309,7 @@ nav {
 
 /* --------------------------About Me section--------------------------------*/
 
-.title-section {
-    height: 100vh;
-}
+
 
 #title {
     font-size: 3rem;
@@ -302,52 +319,48 @@ nav {
 #about {
     margin: 0px auto;
     padding: 150px 0;
+    //how wide the card section will bee
     max-width: 1000px;
     position: relative;
     color: white;
+    font-family: 'Raleway';
+    height: 100vh;
 
-    h3 {
-        display: flex;
-        align-items: center;
-        -moz-box-align: center;
-        width: 100%;
-        font-size: 32px;
-        position: relative;
-        padding: 20px;
-    }
 }
 
 .about-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    -moz-box-align: center;
-    -moz-box-pack: center;
+    width: 100%;
+    @include flexCenter;
+    padding: 0 1.5rem;
 }
-
 
 .about-content {
-    font-family: 'Poppins';
-    font-size: 1rem;
-    padding: 30px 60px 30px 30px;
-    background: color(primary);
-    border-radius: 15px;
-
-
+    width: 100%;
+    max-width: 98rem;
+    padding: 2rem;
+    background-color: color(primary);
+    box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 0.8rem;
+    transform: translateX(2rem);
 }
 
-.about-img {
-    margin: 0 50px 0 auto;
-    position: relative;
-    width: 100%;
-    max-width: 350px;
 
+
+.about-img {
+    min-width: 25rem;
+    max-width: 25rem;
+    height: 25rem;
+    transform: translateX(-4rem);
+    position: relative;
 
     img {
         width: 100%;
         height: 100%;
-        background: color(primary-light);
-        border-radius: 10px;
+        object-fit: cover;
+        display: block;
+        border-radius: 0.8rem;
     }
 
 }
@@ -374,24 +387,34 @@ nav {
     }
 }
 
-
-@media screen and (max-width: 1080px) {
-    #about {
-        padding: 0 20px;
-    }
-}
-
-@media screen and (max-width: 786px) {
-    .about-container {
-        display: inline-block;
+@media screen and (max-width: 868px) {
+    .about-content {
+        max-width: 70rem;
+        transform: translateX(0);
     }
 
     .about-img {
-        margin: 60px auto 0;
+        min-width: 20rem;
+        max-width: 20rem;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .about-container {
+        margin-top: 100px;
     }
 
     .about-content {
-        padding: 30px;
+        padding: 2.5rem;
+        flex-direction: column;
+    }
+
+    .about-img {
+        min-width: 100%;
+        max-width: 100%;
+        transform: translate(0, -4rem);
     }
 }
 
@@ -403,17 +426,9 @@ nav {
     max-width: 1000px;
     position: relative;
     font-family: 'Raleway';
+    height: 100vh;
+    color: white;
 
-    h3 {
-        display: flex;
-        align-items: center;
-        -moz-box-align: center;
-        width: 100%;
-        font-size: 2rem;
-        position: relative;
-        padding: 20px;
-        color: white;
-    }
 
     a {
         text-decoration: none;
@@ -426,15 +441,16 @@ nav {
         justify-content: center;
         padding: 0 1.5rem;
         margin-bottom: 150px;
-
+        min-height: 25rem;
 
     }
 
     .card {
         display: flex;
         flex-direction: column;
-        box-shadow: 2px .8rem 1rem rgba(255, 255, 255, 0.3);
+        // box-shadow: 2px .8rem 1rem rgba(255, 255, 255, 0.3);
         font-family: 'Raleway';
+        height: 100%;
 
 
         &:hover .background-image {
@@ -443,12 +459,12 @@ nav {
 
     }
 
-    .img-data {
+    .project-img {
         height: 25rem;
         position: relative;
         z-index: 1;
         overflow: hidden;
-        border-radius: 10px;
+        border-radius: 0.8rem 0.8rem 0 0;
     }
 
     .background-image {
@@ -463,7 +479,12 @@ nav {
         transition: transform 1s;
     }
 
-    .publication-details {
+    .project-cards-alt .project-hover-cta{
+        display: grid;
+        place-items: center;
+    }
+    
+    .project-hover-cta {
         width: 100%;
         height: 100%;
         background: color(accent-gradient);
@@ -484,34 +505,23 @@ nav {
         }
     }
 
-    .author {
-        // display: grid;
-        // place-items: center;
+    .visit-project {
         margin-bottom: .5rem;
         font-size: 2rem;
         color: inherit;
 
-
-
-
     }
 
-    // .date {
-    //     display: block;
-    // }
-
-    .post-data {
+    .project-info {
         background-color: color(primary);
         padding: 2rem 3rem;
         position: relative;
     }
 
-    .title {
-        font-size: 3rem;
+    .project-title {
+        font-size: 2.5rem;
         line-height: 1;
-
         position: relative;
-
 
 
         &::before {
@@ -520,33 +530,33 @@ nav {
             top: 0;
             left: 0;
             width: 0.5rem;
-            height: 3rem;
+            height: 2.5rem;
             background: color(accent-gradient);
             border-radius: 2rem;
         }
 
     }
 
-    .title-first-word {
-        margin-left: 1rem;
+    .project-title-first-word {
+        margin-left: 0.8rem;
     }
 
-    .subtitle {
+    .project-subtitle {
         font-size: 1.2rem;
         text-transform: uppercase;
         font-weight: 400;
-        color: #a2a2a2;
         margin: 1rem 0 1.5rem 0;
     }
 
 
-    .description {
+    .project-description {
         position: relative;
-
+        color: #f4f4f4;
+        line-height: 150%;
     }
 
 
-    .cta {
+    .project-cta {
         text-align: right;
         font-weight: bold;
         margin-top: 1rem;
@@ -567,7 +577,6 @@ nav {
                 height: 2px;
                 background: color(accent-gradient);
                 transform: scaleX(0);
-
             }
 
             &:hover:before {
@@ -595,119 +604,108 @@ nav {
     }
 
     @media screen and (min-width: 600px) {
+        
         .card {
             flex-direction: row;
             max-width: 75rem;
 
-            &:hover .publication-details {
+            &:hover .project-hover-cta {
                 transform: translateX(0);
 
             }
 
-            &:hover .author {
+            &:hover .visit-project {
                 transform: translateY(0);
                 opacity: 1;
             }
-
-            &:hover .date {
-                transform: translateY(0);
-                opacity: 1;
-            }
-
 
         }
 
-        .img-data {
+        .project-img {
             flex-basis: 60%;
             height: unset;
+            border-radius: 0.8rem 0 0 0.8rem;
         }
 
-        .author {
+        .visit-project {
             transform: translateY(-10rem);
             opacity: 0;
             transition: all 0.5s;
 
             &:after {
-                content: '\f135';
+                content: '\f360';
                 font-family: 'FontAwesome';
-                margin-left: 20px;
                 opacity: 0;
                 vertical-align: middle;
                 transition: margin 0.3s, opacity 0.3s;
             }
 
             &:hover:after {
-                margin-left: 5px;
+                margin-left: 8px;
                 opacity: 1;
                 text-decoration: none;
             }
         }
 
-        .date {
-            transform: translateY(3rem);
-            opacity: 0;
-            transition: all 0.5s 0.3s;
-        }
 
-        .post-data {
+        .project-info {
             flex-basis: 50%;
         }
 
-        .publication-details {
+        .project-hover-cta {
             transform: translateX(-100%);
             transition: transform .5s;
         }
 
-        .post-data {
+        .project-info {
             flex-basis: 60%;
 
-            &::before {
-                content: '';
-                width: 3rem;
-                height: 100%;
-                background-color: color(primary);
-                position: absolute;
-                top: 0;
-                left: -1.25rem;
-                z-index: 10;
-                transform: skewX(5deg);
-
-
-            }
+            // &::before {
+            //     content: '';
+            //     width: 3rem;
+            //     height: 100%;
+            //     background-color: color(primary);
+            //     position: absolute;
+            //     top: 0;
+            //     left: -1.25rem;
+            //     z-index: 10;
+            //     transform: skewX(5deg);
+            // }
         }
 
 
 
         .project-cards-alt {
-            .img-data {
+            .project-img {
                 order: 2;
+                border-radius: 0 0.8rem 0.8rem 0;
             }
 
-            .publication-details {
+            .project-hover-cta {
                 transform: translateX(100%);
                 transition: transform .5s;
+                
             }
 
-            
 
-            .post-data {
+
+            .project-info {
                 &::before {
                     content: '';
                     width: 0rem;
                 }
 
-                &::after {
-                    content: '';
-                    width: 3rem;
-                    height: 100%;
-                    background-color: color(primary);
-                    position: absolute;
-                    top: 0;
-                    right: -1.25rem;
-                    z-index: 10;
-                    transform: skewX(5deg);
-
-                }
+                // &::after {
+                //     content: '';
+                //     width: 3rem;
+                //     height: 100%;
+                //     background-color: color(primary);
+                //     position: absolute;
+                //     top: 0;
+                //     right: -1.25rem;
+                //     z-index: 10;
+                //     transform: skewX(-5deg);
+                // }
             }
 
 

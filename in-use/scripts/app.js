@@ -10,7 +10,7 @@ const navSlide = () => {
 
         mobile_nav.classList.toggle('nav-menu-toggle');
 
-        Animate links
+        // Animate links
         navLinks.forEach((link, index) => {
 
             if (link.style.animation) {
